@@ -1,6 +1,7 @@
 body {
-    background-image:url("cont background.jpg") ;
+    background-image: url("cont background.jpg");
     background-repeat: no-repeat;
+    background-color: springgreen;
     background-size: cover;
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -8,10 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0 10px;
 }
 
 .container {
-    background-color:wheat ;
+    background-color: wheat;
     margin-top: 100px;
     margin-bottom: 50px;
     padding: 20px;
@@ -23,7 +25,7 @@ body {
 }
 
 h1 {
-    color:chartreuse;
+    color:gold;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -38,13 +40,14 @@ input[type="number"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 5px 0 15px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 5px;
+    background: white;
 }
 
 .btn {
-    background:greenyellow;
-    color:tomato;
+    background: greenyellow;
+    color: tomato;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -53,7 +56,7 @@ input[type="number"] {
 }
 
 .btn:hover {
-    background:green;
+    background: green;
 }
 
 .result-area {
@@ -80,13 +83,36 @@ input[type="number"] {
 .hidden {
     display: none;
 }
-.container p{
-    color:navy;
+.container p {
+    color: navy;
     text-align: justify;
 }
-.file-label h4{
-    color:deeppink;
-}
-.age-label h4{
+
+.file-label h4 {
     color: deeppink;
+}
+
+.age-label h4 {
+    color: deeppink;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    input[type="file"],
+    input[type="number"] {
+        width: calc(100% - 15px);
+        padding: 8px;
+    }
 }

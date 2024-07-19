@@ -115,3 +115,23 @@ function enableDownload(results) {
         XLSX.writeFile(wb, 'filtered_senior_citizens.xlsx');
     };
 }
+
+document.getElementById('fileInput').addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const contents = e.target.result;
+            const allRows = contents.split(/\r?\n|\r/);
+            const headers = allRows[0].split(',');
+
+            if (headers.includes('Name') && headers.includes('Age')) {
+                document.getElementById('errorMessage').style.display = 'none';
+                alert('File is valid.');
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        };
+        reader.readAsText(file);
+    }
+});
