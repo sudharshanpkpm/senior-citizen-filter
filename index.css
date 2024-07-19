@@ -1,0 +1,92 @@
+body {
+    background-image:url("cont background.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background-color:wheat ;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(34, 199, 12, 0.705);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color:chartreuse;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="file"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    background:greenyellow;
+    color:tomato;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background:green;
+}
+
+.result-area {
+    margin-top: 20px;
+}
+
+.result-area ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result-area li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.result-area li:nth-child(odd) {
+    background: #efefef;
+}
+
+.hidden {
+    display: none;
+}
+.container p{
+    color:navy;
+    text-align: justify;
+}
+.file-label h4{
+    color:deeppink;
+}
+.age-label h4{
+    color: deeppink;
+}

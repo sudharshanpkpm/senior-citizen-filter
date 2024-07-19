@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Citizen Filter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Senior Citizen Filter</h1>
+        <p>Upload a '.csv' File And Make Sure That The File Must Contain Header As 'Name' And 'Age' In The Format Ensure Once Before Uploading The File </p>
+        <form id="uploadForm">
+            <label for="fileUpload" class="file-label"><h4>Upload A csv File:</h4></label>
+            <input type="file" id="fileUpload" accept=".csv" required>
+            <br>
+            <label for="ageThreshold" class="age-label"><h4>Enter Age:</h4></label>
+            <input type="number" id="ageThreshold" min="1" placeholder="Enter Age" required>
+            <br>
+            <button type="submit" class="btn">Filter</button>
+        </form>
+        <div id="resultArea" class="result-area">
+            <h5>The Filtered Will be Displayed Below</h5>
+        </div>
+        <button id="downloadButton" class="btn" style="display:none;">Download Filtered Data</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzip/3.0.0/pizzip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.21.0/docxtemplater.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
